@@ -1,0 +1,46 @@
+.text-field {
+  outline: none;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+
+  &.smol {
+    font-size: 0.9rem;
+  }
+}
+
+.text-field:hover {
+  border-bottom: 1px solid currentColor;
+  border-bottom-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+.text-field:focus {
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+@media (width > 570px) {
+  .card-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (width > 1000px) {
+  .card-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.card {
+  height: 12rem;
+  align-content: end;
+  padding: 1rem;
+  border-radius: 0.25rem 1rem 0.25rem 1rem;
+}
