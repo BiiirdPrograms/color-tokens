@@ -40,13 +40,15 @@ const Card = ({ color, changeColor, removeColor }: CardProps) => {
       >
         x
       </div>
-      <TextField value={name} onChange={handleChangeName} color={textColor} />
-      <TextField
-        value={hexInputValue}
-        onChange={handleChangeHex}
-        color={textColor}
-        smol
-      />
+      <div className="fields">
+        <TextField value={name} onChange={handleChangeName} color={textColor} />
+        <TextField
+          value={hexInputValue}
+          onChange={handleChangeHex}
+          color={textColor}
+          smol
+        />
+      </div>
     </div>
   );
 };
