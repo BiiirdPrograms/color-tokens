@@ -8,8 +8,9 @@ const DARK = '#eee';
 interface CardProps {
   color: Color;
   changeColor: (newVal: Color) => void;
+  removeColor: () => void;
 }
-const Card = ({ color, changeColor }: CardProps) => {
+const Card = ({ color, changeColor, removeColor }: CardProps) => {
   const { name, hex } = color;
   const [hexInputValue, setHexInputValue] = useState(hex);
 
@@ -32,6 +33,13 @@ const Card = ({ color, changeColor }: CardProps) => {
 
   return (
     <div className="card" style={containerStyle}>
+      <div
+        className="delete"
+        style={{ color: textColor }}
+        onClick={removeColor}
+      >
+        x
+      </div>
       <TextField value={name} onChange={handleChangeName} color={textColor} />
       <TextField
         value={hexInputValue}
