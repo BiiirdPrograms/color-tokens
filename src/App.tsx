@@ -11,7 +11,7 @@ const DEFAULT_COLORS: Color[] = [
 ];
 
 const colorsFromUrlSearchParams = (params: URLSearchParams) => {
-  const colorsString = params.get('colors');
+  const colorsString = params.get('colors') || '';
   try {
     const parsed = JSON.parse(colorsString);
     if (!Array.isArray(parsed)) {
