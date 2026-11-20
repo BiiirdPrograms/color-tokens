@@ -15,7 +15,7 @@ const CardContainer = ({ colors, changeColors }: CardContainerProps) => {
   return (
     <div className="card-container">
       {colors.map((color, i) => (
-        <Card color={color} changeColor={changeColor(i)} />
+        <Card key={i} color={color} changeColor={changeColor(i)} />
       ))}
     </div>
   );
